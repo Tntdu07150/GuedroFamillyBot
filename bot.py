@@ -100,7 +100,7 @@ def recevoir_message():
 @app.route("/set-webhook", methods=["GET"])
 def configurer_webhook():
 
-    webhook_url = request.url_root.rstrip("/") + "/telegram"
+    webhook_url = "https://guedrofamillybot.onrender.com/telegram"
 
     resultat = telegram("setWebhook", {
         "url": webhook_url
