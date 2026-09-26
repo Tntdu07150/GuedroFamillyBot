@@ -418,19 +418,15 @@ def mini_app():
     <div class="container">
 
         <div class="category">
-            📦 CATÉGORIE 1
+             Weed 🌱
         </div>
 
         <div class="category">
-            📦 CATÉGORIE 2
+            Hash 🌱🧈
         </div>
 
         <div class="category">
-            📦 CATÉGORIE 3
-        </div>
-
-        <div class="category">
-            ℹ️ INFORMATIONS
+            Produit festif 🎉
         </div>
 
         <div class="footer">
