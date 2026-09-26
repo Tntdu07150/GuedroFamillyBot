@@ -96,115 +96,7 @@ def menu_principal(chat_id):
         "parse_mode": "Markdown",
         "reply_markup": clavier
     })
-<!-- ========================= -->
-
-<!-- CATÉGORIE 1 -->
-
-<!-- ========================= -->
-
-<div id="page-categorie1" class="hidden">
-
-    <div class="header">
-
-        📦 CATÉGORIE 1
-
-    </div>
-
-    <div class="subtitle">
-
-        Choisis une sous-catégorie
-
-    </div>
-
-    <div class="container">
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 1
-
-        </div>
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 2
-
-        </div>
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 3
-
-        </div>
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 4
-
-        </div>
-
-        <div
-
-            class="category back"
-
-            onclick="retourAccueil()"
-
-        >
-
-            ⬅️ RETOUR
-
-        </div>
-
-    </div>
-
-</div>
-
-<script>
-
-const tg = window.Telegram.WebApp;
-
-tg.ready();
-
-tg.expand();
-
-function ouvrirCategorie1() {
-
-    document.getElementById(
-
-        "page-principale"
-
-    ).classList.add("hidden");
-
-    document.getElementById(
-
-        "page-categorie1"
-
-    ).classList.remove("hidden");
-
-}
-
-function retourAccueil() {
-
-    document.getElementById(
-
-        "page-categorie1"
-
-    ).classList.add("hidden");
-
-    document.getElementById(
-
-        "page-principale"
-
-    ).classList.remove("hidden");
-
-}
-
-</script>
-
-</body>
-
-</html>
-
-"""
+<!
 
 # =========================
 # MINI APP
@@ -337,7 +229,113 @@ tg.expand();
 
 </html>
 """
+-- ========================= -->
 
+<!-- Hash 🧈 -->
+
+<!-- ========================= -->
+
+<div id="page-Hash🧈" class="hidden">
+
+    <div class="header">
+
+        Hash🧈
+
+    </div>
+
+    <div class="subtitle">
+
+        Choisis une sous-catégorie
+
+    </div>
+
+    <div class="container">
+
+        <div class="category">
+
+            📦 SOUS-CATÉGORIE 1
+
+        </div>
+
+        <div class="category">
+
+            📦 SOUS-CATÉGORIE 2
+
+        </div>
+
+        <div class="category">
+
+            📦 SOUS-CATÉGORIE 3
+
+        </div>
+
+        <div class="category">
+
+            📦 SOUS-CATÉGORIE 4
+
+        </div>
+
+        <div
+
+            class="category back"
+
+            onclick="retourAccueil()"
+
+        >
+
+            ⬅️ RETOUR
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const tg = window.Telegram.WebApp;
+
+tg.ready();
+
+tg.expand();
+
+function ouvrirCategorie1() {
+
+    document.getElementById(
+
+        "page-principale"
+
+    ).classList.add("hidden");
+
+    document.getElementById(
+
+        "page-categorie1"
+
+    ).classList.remove("hidden");
+
+}
+
+function retourAccueil() {
+
+    document.getElementById(
+
+        "page-categorie1"
+
+    ).classList.add("hidden");
+
+    document.getElementById(
+
+        "page-principale"
+
+    ).classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+
+</html>
 
 # =========================
 # PAGE TEST
