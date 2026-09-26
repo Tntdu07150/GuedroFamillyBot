@@ -242,19 +242,19 @@ body {
     <div class="container">
 
         <div class="category">
-            📦 SOUS-CATÉGORIE 1
+            Jaune de Californie 🇺🇸🔝
         </div>
 
         <div class="category">
-            📦 SOUS-CATÉGORIE 2
+            Dry sift 120/u ferme Porgiuez 🇪🇸⚠️
         </div>
 
         <div class="category">
-            📦 SOUS-CATÉGORIE 3
+            Dry sift prenium ferme du rif 🧈🌱
         </div>
 
         <div class="category">
-            📦 SOUS-CATÉGORIE 4
+            Static prenium ferme vss 🎉🥇
         </div>
 
         <div
@@ -364,13 +364,3 @@ def configurer_webhook():
 if __name__ == "__main__":
 
     port = int(
-        os.environ.get(
-            "PORT",
-            10000
-        )
-    )
-
-    app.run(
-        host="0.0.0.0",
-        port=port
-    )
