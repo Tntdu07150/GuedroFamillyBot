@@ -46,19 +46,23 @@ def menu_principal(chat_id):
             ],
             [
                 {
+                    "text": "📞 NOUS CONTACTER",
+                    "url": CONTACT_URL
+                }
+            ],
+            [
+                {
                     "text": "📍 LOCALISATION",
                     "url": LOCALISATION_URL
-                },
+                }
+            ],
+            [
                 {
                     "text": "📦 COLIS EN LIVRAISON !",
                     "url": COLIS_URL
                 }
             ],
             [
-                {
-                    "text": "📞 NOUS CONTACTER",
-                    "url": CONTACT_URL
-                },
                 {
                     "text": "📊 SONDAGE",
                     "url": SONDAGE_URL
