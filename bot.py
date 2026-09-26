@@ -201,25 +201,20 @@ body {
             class="category"
             onclick="ouvrirCategorie1()"
         >
-                <div class="category">
-        🛒 MENU / SHOP
-    </div>
+            Hash🧈
+        </div>
 
-    <div class="category">
-        Hash🧈
-    </div>
+        <div class="category">
+            Weed🌱
+        </div>
 
-    <div class="category">
-        Weed🌱
-    </div>
+        <div class="category">
+            Wpff✅
+        </div>
 
-    <div class="category">
-        Wpff✅
-    </div>
-
-    <div class="category">
-        Produit festif🎉
-    </div>
+        <div class="category">
+            Produit festif 🥳 
+        </div>
 
     </div>
 
@@ -237,7 +232,7 @@ body {
 <div id="page-categorie1" class="hidden">
 
     <div class="header">
-        📦 CATÉGORIE 1
+        Hash🧈
     </div>
 
     <div class="subtitle">
