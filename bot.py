@@ -16,7 +16,6 @@ LOCALISATION_URL = "https://t.me/+RvPIBlR9YaczMTA0"
 COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 
-# Mini App
 MINI_APP_URL = "https://guedrofamillybot.onrender.com/app"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
@@ -38,42 +37,36 @@ def menu_principal(chat_id):
 
     clavier = {
         "inline_keyboard": [
-
             [
                 {
                     "text": "🛒 MENU / SHOP",
                     "url": SHOP_URL
                 }
             ],
-
             [
                 {
                     "text": "📞 NOUS CONTACTER",
                     "url": CONTACT_URL
                 }
             ],
-
             [
                 {
                     "text": "📍 LOCALISATION",
                     "url": LOCALISATION_URL
                 }
             ],
-
             [
                 {
                     "text": "📦 COLIS EN LIVRAISON",
                     "url": COLIS_URL
                 }
             ],
-
             [
                 {
                     "text": "📊 SONDAGE",
                     "url": SONDAGE_URL
                 }
             ],
-
             [
                 {
                     "text": "📱 MINI APP",
@@ -82,7 +75,6 @@ def menu_principal(chat_id):
                     }
                 }
             ]
-
         ]
     }
 
@@ -96,7 +88,7 @@ def menu_principal(chat_id):
         "parse_mode": "Markdown",
         "reply_markup": clavier
     })
-<!
+
 
 # =========================
 # MINI APP
@@ -167,6 +159,15 @@ body {
     transform: scale(0.98);
 }
 
+.back {
+    background: #333;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
 .footer {
     text-align: center;
     color: #777;
@@ -180,41 +181,93 @@ body {
 
 <body>
 
-<div class="header">
-    ✈️ Guedrofamilly
+<!-- ========================= -->
+<!-- PAGE PRINCIPALE -->
+<!-- ========================= -->
+
+<div id="page-principale">
+
+    <div class="header">
+        ✈️ Guedrofamilly
+    </div>
+
+    <div class="subtitle">
+        Bienvenue 👋
+    </div>
+
+    <div class="container">
+
+        <div
+            class="category"
+            onclick="ouvrirCategorie1()"
+        >
+            📦 CATÉGORIE 1
+        </div>
+
+        <div class="category">
+            📦 CATÉGORIE 2
+        </div>
+
+        <div class="category">
+            📦 CATÉGORIE 3
+        </div>
+
+        <div class="category">
+            📦 CATÉGORIE 4
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Guedrofamilly
+    </div>
+
 </div>
 
-<div class="subtitle">
-    Bienvenue 👋
+
+<!-- ========================= -->
+<!-- SOUS-CATÉGORIES -->
+<!-- ========================= -->
+
+<div id="page-categorie1" class="hidden">
+
+    <div class="header">
+        📦 CATÉGORIE 1
+    </div>
+
+    <div class="subtitle">
+        Choisis une sous-catégorie
+    </div>
+
+    <div class="container">
+
+        <div class="category">
+            📦 SOUS-CATÉGORIE 1
+        </div>
+
+        <div class="category">
+            📦 SOUS-CATÉGORIE 2
+        </div>
+
+        <div class="category">
+            📦 SOUS-CATÉGORIE 3
+        </div>
+
+        <div class="category">
+            📦 SOUS-CATÉGORIE 4
+        </div>
+
+        <div
+            class="category back"
+            onclick="retourAccueil()"
+        >
+            ⬅️ RETOUR
+        </div>
+
+    </div>
+
 </div>
 
-<div class="container">
-
-    <div class="category">
-        🛒 MENU / SHOP
-    </div>
-
-    <div class="category">
-        Hash🧈
-    </div>
-
-    <div class="category">
-        Weed🌱
-    </div>
-
-    <div class="category">
-        Wpff✅
-    </div>
-
-    <div class="category">
-        Produit festif🎉
-    </div>
-
-</div>
-
-<div class="footer">
-    Guedrofamilly
-</div>
 
 <script>
 
@@ -222,6 +275,30 @@ const tg = window.Telegram.WebApp;
 
 tg.ready();
 tg.expand();
+
+
+function ouvrirCategorie1() {
+
+    document
+        .getElementById("page-principale")
+        .classList.add("hidden");
+
+    document
+        .getElementById("page-categorie1")
+        .classList.remove("hidden");
+}
+
+
+function retourAccueil() {
+
+    document
+        .getElementById("page-categorie1")
+        .classList.add("hidden");
+
+    document
+        .getElementById("page-principale")
+        .classList.remove("hidden");
+}
 
 </script>
 
@@ -229,113 +306,7 @@ tg.expand();
 
 </html>
 """
--- ========================= -->
 
-<!-- Hash 🧈 -->
-
-<!-- ========================= -->
-
-<div id="page-Hash🧈" class="hidden">
-
-    <div class="header">
-
-        Hash🧈
-
-    </div>
-
-    <div class="subtitle">
-
-        Choisis une sous-catégorie
-
-    </div>
-
-    <div class="container">
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 1
-
-        </div>
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 2
-
-        </div>
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 3
-
-        </div>
-
-        <div class="category">
-
-            📦 SOUS-CATÉGORIE 4
-
-        </div>
-
-        <div
-
-            class="category back"
-
-            onclick="retourAccueil()"
-
-        >
-
-            ⬅️ RETOUR
-
-        </div>
-
-    </div>
-
-</div>
-
-<script>
-
-const tg = window.Telegram.WebApp;
-
-tg.ready();
-
-tg.expand();
-
-function ouvrirCategorie1() {
-
-    document.getElementById(
-
-        "page-principale"
-
-    ).classList.add("hidden");
-
-    document.getElementById(
-
-        "page-categorie1"
-
-    ).classList.remove("hidden");
-
-}
-
-function retourAccueil() {
-
-    document.getElementById(
-
-        "page-categorie1"
-
-    ).classList.add("hidden");
-
-    document.getElementById(
-
-        "page-principale"
-
-    ).classList.remove("hidden");
-
-}
-
-</script>
-
-</body>
-
-</html>
 
 # =========================
 # PAGE TEST
