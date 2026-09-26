@@ -1,11 +1,10 @@
+import os
 import requests
-import time
+from flask import Flask, request
 
-# ==============================
-# CONFIGURATION
-# ==============================
+app = Flask(__name__)
 
-TOKEN = "8847632379:AAGHO2sIusFM_WNNoZlTQ74c7f7cjZZs0N8"
+TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 
 CONTACT_URL = "https://t.me/+HgfeOV-dulE3ZDJk"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
@@ -13,22 +12,13 @@ SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 API = f"https://api.telegram.org/bot{TOKEN}"
 
 
-# ==============================
-# ENVOYER UNE REQUÊTE TELEGRAM
-# ==============================
-
 def telegram(method, data=None):
-    response = requests.post(
+    return requests.post(
         f"{API}/{method}",
         json=data or {},
-        timeout=30
-    )
-    return response.json()
+        timeout=15
+    ).json()
 
-
-# ==============================
-# MENU PRINCIPAL
-# ==============================
 
 def afficher_menu(chat_id):
 
@@ -64,77 +54,61 @@ def afficher_menu(chat_id):
     })
 
 
-# ==============================
-# BOUCLE DU BOT
-# ==============================
+@app.route("/", methods=["GET"])
+def accueil():
+    return "🤖 Guedrofamilly Bot OK"
 
-def lancer_bot():
 
-    print("🤖 Guedrofamilly Bot démarré !")
-    print("En attente des messages...")
+@app.route("/telegram", methods=["POST"])
+def recevoir_message():
 
-    offset = None
+    update = request.get_json(silent=True) or {}
 
-    while True:
+    message = update.get("message")
 
-        try:
+    if message:
+        chat_id = message["chat"]["id"]
+        texte = message.get("text", "").strip()
 
-            result = telegram("getUpdates", {
-                "offset": offset,
-                "timeout": 30
+        if texte in ["/start", "/menu"]:
+            afficher_menu(chat_id)
+
+    callback = update.get("callback_query")
+
+    if callback:
+
+        telegram("answerCallbackQuery", {
+            "callback_query_id": callback["id"]
+        })
+
+        if callback.get("data") == "shop":
+
+            chat_id = callback["message"]["chat"]["id"]
+
+            telegram("sendMessage", {
+                "chat_id": chat_id,
+                "text": (
+                    "🛒 *MENU / SHOP*\n\n"
+                    "Bientôt disponible 👀"
+                ),
+                "parse_mode": "Markdown"
             })
 
-            if not result.get("ok"):
-                print("Erreur Telegram :", result)
-                time.sleep(5)
-                continue
-
-            for update in result.get("result", []):
-
-                offset = update["update_id"] + 1
-
-                # Message reçu
-                message = update.get("message")
-
-                if message:
-
-                    chat_id = message["chat"]["id"]
-                    texte = message.get("text", "").strip()
-
-                    if texte in ["/start", "/menu"]:
-                        afficher_menu(chat_id)
-
-                # Bouton SHOP
-                callback = update.get("callback_query")
-
-                if callback:
-
-                    telegram("answerCallbackQuery", {
-                        "callback_query_id": callback["id"]
-                    })
-
-                    if callback.get("data") == "shop":
-
-                        chat_id = callback["message"]["chat"]["id"]
-
-                        telegram("sendMessage", {
-                            "chat_id": chat_id,
-                            "text": (
-                                "🛒 *MENU / SHOP*\n\n"
-                                "Bientôt disponible 👀"
-                            ),
-                            "parse_mode": "Markdown"
-                        })
-
-        except Exception as e:
-
-            print("Erreur :", e)
-            time.sleep(5)
+    return "OK"
 
 
-# ==============================
-# DÉMARRAGE
-# ==============================
+@app.route("/set-webhook", methods=["GET"])
+def configurer_webhook():
+
+    webhook_url = request.url_root.rstrip("/") + "/telegram"
+
+    resultat = telegram("setWebhook", {
+        "url": webhook_url
+    })
+
+    return resultat
+
 
 if __name__ == "__main__":
-    lancer_bot()
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
