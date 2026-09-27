@@ -40,6 +40,14 @@ def menu_principal(chat_id):
         "inline_keyboard": [
             [
                 {
+                    "text": "📱 APPLICATION MENU",
+                    "web_app": {
+                        "url": MINI_APP_URL
+                    }
+                }
+            ],
+            [
+                {
                     "text": "🛒 MENU / SHOP",
                     "url": SHOP_URL
                 }
@@ -73,14 +81,6 @@ def menu_principal(chat_id):
                     "text": "⭐ VIP GUEDROFAMILLY",
                     "url": VIPGUEDROFAMILLY_URL
                 }
-            ],
-            [
-                {
-                    "text": "📱 MINI APP",
-                    "web_app": {
-                        "url": MINI_APP_URL
-                    }
-                }
             ]
         ]
     }
@@ -98,7 +98,7 @@ def menu_principal(chat_id):
 
 
 # =========================
-# MINI APP
+# MINI APP (APPLICATION MENU)
 # =========================
 
 @app.route("/app", methods=["GET"])
@@ -329,41 +329,13 @@ body {
 <div id="page-categorie1" class="hidden">
     <div class="subtitle">Sélectionne ton produit 👇</div>
     <div class="container">
-        <div class="category" onclick="afficherPage('produit-mousse')">1️⃣ Mousse de Californie 🇺🇸✅</div>
-        <div class="category" onclick="afficherPage('produit-porgiuez')">2️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
-        <div class="category" onclick="afficherPage('produit-vss')">3️⃣ Static de ferme/club (VVS) 🥇</div>
+        <div class="category" onclick="afficherPage('produit-porgiuez')">1️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
+        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Static de ferme/club (VVS) 🥇</div>
         <div class="category back" onclick="afficherPage('page-principale')">⬅️ RETOUR</div>
     </div>
 </div>
 
-<!-- PRODUIT 1: Mousse de Californie -->
-<div id="produit-mousse" class="hidden">
-    <div class="container">
-        <div class="product-card">
-            <div class="media-container">
-                <img src="https://via.placeholder.com/400x250" alt="Mousse de Californie">
-            </div>
-            <div class="description">
-                <b>Produit :</b> Mousse de Californie 🇺🇸<br>
-                <b>Qualité :</b> TOP ⭐️
-            </div>
-            <table class="price-table">
-                <thead>
-                    <tr><th>Quantité</th><th>Prix Total</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Détail (1g)</td><td><strong>7 €</strong></td></tr>
-                    <tr><td>10g</td><td><strong>65 €</strong></td></tr>
-                    <tr><td>20g</td><td><strong>120 €</strong></td></tr>
-                </tbody>
-            </table>
-            <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander</a>
-        </div>
-        <div class="category back" onclick="afficherPage('page-categorie1')">⬅️ RETOUR HASH</div>
-    </div>
-</div>
-
-<!-- PRODUIT 2: Dry sift 120u Porgiuez -->
+<!-- PRODUIT 1: Dry sift 120u Porgiuez -->
 <div id="produit-porgiuez" class="hidden">
     <div class="container">
         <div class="product-card">
@@ -391,7 +363,7 @@ body {
     </div>
 </div>
 
-<!-- PRODUIT 3: Static de ferme/club -->
+<!-- PRODUIT 2: Static de ferme/club -->
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
@@ -432,7 +404,6 @@ function afficherPage(idPage) {
     const pages = [
         'page-principale',
         'page-categorie1',
-        'produit-mousse',
         'produit-porgiuez',
         'produit-vss'
     ];
