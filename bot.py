@@ -357,7 +357,10 @@ body {
                     <tr><td>100g</td><td><strong>480 €</strong></td></tr>
                 </tbody>
             </table>
-            <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander</a>
+            <div class="description">
+                <i>Si plus, venez en MP 💬</i>
+            </div>
+            <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander / Infos MP</a>
         </div>
         <div class="category back" onclick="afficherPage('page-categorie1')">⬅️ RETOUR HASH</div>
     </div>
