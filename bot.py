@@ -309,7 +309,7 @@ body {
 
 <!-- LOGO & TITRE PERMANENTS -->
 <div class="brand-header">
-    <img class="logo-img" src="https://i.ibb.co/mCpy9p07/4584-E461-74-CC-44-BF-A7-C6-28600-C22-F000.png" alt="Guedrofamilly Logo" onerror="this.src='https://via.placeholder.com/120/000000/ffffff?text=GF'">
+    <img class="logo-img" src="https://i.postimg.cc/gcV2KRh6/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Guedrofamilly Logo" onerror="this.src='https://via.placeholder.com/120/000000/ffffff?text=GF'">
     <div class="header-title">Guedrofamilly</div>
 </div>
 
