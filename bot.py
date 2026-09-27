@@ -380,7 +380,7 @@ body {
                 <b>Produit :</b> Static de ferme/club 🥇<br>
                 <b>Origine :</b> VVS Tanger Farm<br>
                 <b>Export :</b> Espagne social club<br><br>
-                👑 <b>Gamme :</b> Ultra Premium (Sélection d'exception extraite selon les procédés les plus exigeants).<br><br>
+                👑 <b>Gamme :</b> Ultra Premium — Une extraction d'exception réservée aux amateurs exigeants.<br><br>
                 ⚡️ <b>Terpènes & Saveurs :</b> Profil aromatique ultra concentré avec un excellent terp-lock. Arômes intenses et gazeux (gas/diesel) relevés de notes d'agrumes et de résine fraîche.<br><br>
                 💎 <b>Aspect & Texture :</b> Texture vitreuse et translucide à température ambiante, fondant instantanément sous les doigts. Combustion très propre avec une cendre blanche.
             </div>
