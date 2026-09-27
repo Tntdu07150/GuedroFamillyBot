@@ -113,6 +113,8 @@ def mini_app():
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guedrofamilly</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<!-- Police style street / graffiti pour le titre -->
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -122,24 +124,41 @@ def mini_app():
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0a0a0c;
-    color: #e0e0e0;
+    background: radial-gradient(circle, #1a1c23 0%, #08090b 100%);
+    color: #ffffff;
+    min-height: 100vh;
 }
 
-.header {
-    padding: 30px 20px 10px;
+/* En-tête avec Logo et Titre */
+.brand-header {
     text-align: center;
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: #2ec4b6;
-    text-shadow: 0 0 10px rgba(46, 196, 182, 0.4);
+    padding: 20px 10px 10px;
+}
+
+.logo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+    object-fit: cover;
+}
+
+.header-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 34px;
+    color: #ff003c;
+    text-shadow: 0 0 10px #ff003c, 0 0 20px #ff003c;
+    margin-top: 10px;
+    letter-spacing: 2px;
 }
 
 .subtitle {
     text-align: center;
-    color: #888;
+    color: #39ff14;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
     margin-bottom: 25px;
+    font-weight: bold;
     font-size: 14px;
 }
 
@@ -147,43 +166,47 @@ body {
     padding: 0 20px 30px;
 }
 
+/* Boutons de Catégories */
 .category {
-    background: linear-gradient(145deg, #16181d, #111215);
-    border: 1px solid #2a2e39;
+    background: linear-gradient(135deg, #1f232d, #14161d);
+    border: 2px solid #39ff14;
     border-radius: 16px;
-    padding: 20px;
+    padding: 18px;
     margin-bottom: 15px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.25);
     transition: all 0.2s ease;
 }
 
 .category:active {
     transform: scale(0.97);
-    border-color: #2ec4b6;
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
 }
 
 .back {
-    background: #22252e;
-    border-color: #333846;
+    background: linear-gradient(135deg, #2e1419, #1a0b0d);
+    border-color: #ff003c;
+    color: #ff003c;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.5);
+    box-shadow: 0 0 15px rgba(ff, 0, 60, 0.2);
     text-align: center;
     margin-top: 20px;
-    color: #aaa;
 }
 
 .hidden {
     display: none;
 }
 
-/* Fiche Produit */
+/* Fiches Produits */
 .product-card {
-    background: linear-gradient(145deg, #14161b, #0d0e11);
+    background: linear-gradient(145deg, #1a1d26, #101218);
     border-radius: 18px;
     padding: 20px;
-    border: 1px solid #252934;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
 }
 
 .media-container {
@@ -192,7 +215,7 @@ body {
     overflow: hidden;
     margin-bottom: 18px;
     background: #000;
-    border: 1px solid #2a2e39;
+    border: 1px solid #39ff14;
 }
 
 .media-container img, .media-container video {
@@ -204,26 +227,27 @@ body {
 
 .description {
     font-size: 14px;
-    color: #bbb;
+    color: #e0e0e0;
     line-height: 1.6;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
     padding: 12px;
     border-radius: 10px;
-    border-left: 3px solid #ff9f1c;
+    border-left: 4px solid #ff003c;
 }
 
 .badge-soon {
-    background: linear-gradient(90deg, #ff9f1c, #ffbf69);
-    color: #000;
+    background: linear-gradient(90deg, #ff003c, #ff5e00);
+    color: #ffffff;
     font-weight: 800;
     padding: 8px 12px;
     border-radius: 8px;
     display: block;
     text-align: center;
     margin-bottom: 15px;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0.5px;
+    box-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
 }
 
 .price-table {
@@ -235,25 +259,27 @@ body {
 .price-table th, .price-table td {
     padding: 12px 14px;
     text-align: left;
-    border-bottom: 1px solid #22252e;
+    border-bottom: 1px solid #2a2e3d;
     font-size: 14px;
 }
 
 .price-table th {
-    background: #1c1f26;
-    color: #2ec4b6;
+    background: #12141a;
+    color: #39ff14;
     font-weight: bold;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.4);
 }
 
 .price-table td strong {
-    color: #ff9f1c;
-    font-size: 15px;
+    color: #ff003c;
+    font-size: 16px;
+    text-shadow: 0 0 5px rgba(255, 0, 60, 0.4);
 }
 
 .btn-order {
     display: block;
     width: 100%;
-    background: linear-gradient(135deg, #0088cc, #005580);
+    background: linear-gradient(135deg, #ff003c, #990024);
     color: white;
     text-align: center;
     padding: 15px;
@@ -261,7 +287,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.5);
 }
 
 .btn-order:active {
@@ -270,7 +296,7 @@ body {
 
 .footer {
     text-align: center;
-    color: #555;
+    color: #666;
     font-size: 12px;
     margin-top: 30px;
 }
@@ -279,10 +305,16 @@ body {
 
 <body>
 
+<!-- LOGO & TITRE PERMANENTS -->
+<div class="brand-header">
+    <!-- Remplace le lien ci-dessous par l'URL hébergée de ton image si besoin -->
+    <img class="logo-img" src="https://i.ibb.co/L5m4S39/guedro-logo.jpg" alt="Guedrofamilly Logo" onerror="this.src='https://via.placeholder.com/120/000000/39ff14?text=GF'">
+    <div class="header-title">Guedrofamilly</div>
+</div>
+
 <!-- PAGE PRINCIPALE -->
 <div id="page-principale">
-    <div class="header">✈️ GUEDROFAMILLY</div>
-    <div class="subtitle">Menu Officiel 👋</div>
+    <div class="subtitle">Bienvenue sur le Menu 👋</div>
     <div class="container">
         <div class="category" onclick="afficherPage('page-categorie1')">🧈 Hash</div>
         <div class="category">🌱 Weed</div>
@@ -294,8 +326,7 @@ body {
 
 <!-- SOUS-CATÉGORIES HASH -->
 <div id="page-categorie1" class="hidden">
-    <div class="header">🧈 HASH</div>
-    <div class="subtitle">Sélectionne ton produit</div>
+    <div class="subtitle">Sélectionne ton produit 👇</div>
     <div class="container">
         <div class="category" onclick="afficherPage('produit-mousse')">1️⃣ Mousse de Californie 🇺🇸✅</div>
         <div class="category" onclick="afficherPage('produit-porgiuez')">2️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
@@ -306,13 +337,13 @@ body {
 
 <!-- PRODUIT 1: Mousse de Californie -->
 <div id="produit-mousse" class="hidden">
-    <div class="header">Mousse de Californie 🇺🇸</div>
     <div class="container">
         <div class="product-card">
             <div class="media-container">
                 <img src="https://via.placeholder.com/400x250" alt="Mousse de Californie">
             </div>
             <div class="description">
+                <b>Produit :</b> Mousse de Californie 🇺🇸<br>
                 <b>Qualité :</b> TOP ⭐️
             </div>
             <table class="price-table">
@@ -333,14 +364,14 @@ body {
 
 <!-- PRODUIT 2: Dry sift 120u Porgiuez -->
 <div id="produit-porgiuez" class="hidden">
-    <div class="header">Dry sift 120u 🇪🇸</div>
     <div class="container">
         <div class="product-card">
             <div class="media-container">
                 <img src="https://via.placeholder.com/400x250" alt="Dry sift Porgiuez">
             </div>
             <div class="description">
-                <b>Origine :</b> Ferme / Club Porgiuez 🇪🇸
+                <b>Produit :</b> Dry sift 120u 🇪🇸<br>
+                <b>Origine :</b> Ferme / Club Porgiuez
             </div>
             <table class="price-table">
                 <thead>
@@ -361,7 +392,6 @@ body {
 
 <!-- PRODUIT 3: Static de ferme/club -->
 <div id="produit-vss" class="hidden">
-    <div class="header">Static de ferme/club 🥇</div>
     <div class="container">
         <div class="product-card">
             <div class="badge-soon">⏳ CE PRODUIT ARRIVE PROCHAINEMENT</div>
@@ -369,6 +399,7 @@ body {
                 <img src="https://via.placeholder.com/400x250" alt="Static VSS">
             </div>
             <div class="description">
+                <b>Produit :</b> Static de ferme/club 🥇<br>
                 <b>Origine :</b> VVS Tanger Farm<br>
                 <b>Export :</b> Espagne social club
             </div>
@@ -382,7 +413,7 @@ body {
                     <tr><td>20g</td><td><strong>160 €</strong></td></tr>
                 </tbody>
             </table>
-            <div class="description" style="border-left-color: #2ec4b6;">
+            <div class="description" style="border-left-color: #39ff14;">
                 <i>Si plus, venez en MP 💬</i>
             </div>
             <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander / Infos MP</a>
