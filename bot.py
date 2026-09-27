@@ -15,6 +15,7 @@ CONTACT_URL = "https://t.me/+HgfeOV-dulE3ZDJk"
 LOCALISATION_URL = "https://t.me/+RvPIBlR9YaczMTA0"
 COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
+VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
 MINI_APP_URL = "https://guedrofamillybot.onrender.com/app"
 
@@ -54,6 +55,36 @@ def menu_principal(chat_id):
                     "text": "📍 LOCALISATION",
                     "url": LOCALISATION_URL
                 }
+            ],
+            [
+                {
+                    "text": "📦 COLIS EN LIVRAISON",
+                    "url": COLIS_URL
+                }
+            ],
+            [
+                {
+                    "text": "📊 SONDAGE",
+                    "url": SONDAGE_URL
+                }
+            ],
+            [
+                {
+                    "text": "⭐ VIP GUEDROFAMILLY",
+                    "url": VIPGUEDROFAMILLY_URL
+                }
+            ],
+            [
+                {
+                    "text": "📱 MINI APP",
+                    "web_app": {
+                        "url": MINI_APP_URL
+                    }
+                }
+            ]
+        ]
+    }
+
             ],
             [
                 {
