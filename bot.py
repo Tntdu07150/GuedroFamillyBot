@@ -113,7 +113,6 @@ def mini_app():
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guedrofamilly</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<!-- Police style street / graffiti pour le titre -->
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 <style>
@@ -139,8 +138,8 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 2px solid #39ff14;
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     object-fit: cover;
 }
 
@@ -153,37 +152,38 @@ body {
     letter-spacing: 2px;
 }
 
+/* Sous-titre en Rouge */
 .subtitle {
     text-align: center;
-    color: #39ff14;
-    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+    color: #ff003c;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.6);
     margin-bottom: 25px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .container {
     padding: 0 20px 30px;
 }
 
-/* Boutons de Catégories */
+/* Boutons / Catégories (Contours en Blanc) */
 .category {
     background: linear-gradient(135deg, #1f232d, #14161d);
-    border: 2px solid #39ff14;
+    border: 2px solid #ffffff;
     border-radius: 16px;
     padding: 18px;
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: bold;
+    color: #ffffff;
     cursor: pointer;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 15px rgba(57, 255, 20, 0.25);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
     transition: all 0.2s ease;
 }
 
 .category:active {
     transform: scale(0.97);
-    box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 .back {
@@ -191,7 +191,7 @@ body {
     border-color: #ff003c;
     color: #ff003c;
     text-shadow: 0 0 8px rgba(255, 0, 60, 0.5);
-    box-shadow: 0 0 15px rgba(ff, 0, 60, 0.2);
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.2);
     text-align: center;
     margin-top: 20px;
 }
@@ -205,8 +205,8 @@ body {
     background: linear-gradient(145deg, #1a1d26, #101218);
     border-radius: 18px;
     padding: 20px;
-    border: 2px solid #39ff14;
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .media-container {
@@ -215,7 +215,7 @@ body {
     overflow: hidden;
     margin-bottom: 18px;
     background: #000;
-    border: 1px solid #39ff14;
+    border: 1px solid #ffffff;
 }
 
 .media-container img, .media-container video {
@@ -233,7 +233,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     padding: 12px;
     border-radius: 10px;
-    border-left: 4px solid #ff003c;
+    border-left: 4px solid #ffffff;
 }
 
 .badge-soon {
@@ -250,6 +250,7 @@ body {
     box-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
 }
 
+/* Tableau des Prix */
 .price-table {
     width: 100%;
     border-collapse: collapse;
@@ -263,17 +264,18 @@ body {
     font-size: 14px;
 }
 
+/* En-têtes du tableau en ROUGE */
 .price-table th {
     background: #12141a;
-    color: #39ff14;
+    color: #ff003c;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(57, 255, 20, 0.4);
+    text-shadow: 0 0 5px rgba(255, 0, 60, 0.5);
 }
 
+/* Prix des produits en BLANC */
 .price-table td strong {
-    color: #ff003c;
+    color: #ffffff;
     font-size: 16px;
-    text-shadow: 0 0 5px rgba(255, 0, 60, 0.4);
 }
 
 .btn-order {
@@ -307,8 +309,7 @@ body {
 
 <!-- LOGO & TITRE PERMANENTS -->
 <div class="brand-header">
-    <!-- Remplace le lien ci-dessous par l'URL hébergée de ton image si besoin -->
-    <img class="logo-img" src="https://i.ibb.co/L5m4S39/guedro-logo.jpg" alt="Guedrofamilly Logo" onerror="this.src='https://via.placeholder.com/120/000000/39ff14?text=GF'">
+    <img class="logo-img" src="https://i.ibb.co/L5m4S39/guedro-logo.jpg" alt="Guedrofamilly Logo" onerror="this.src='https://via.placeholder.com/120/000000/ffffff?text=GF'">
     <div class="header-title">Guedrofamilly</div>
 </div>
 
@@ -413,7 +414,7 @@ body {
                     <tr><td>20g</td><td><strong>160 €</strong></td></tr>
                 </tbody>
             </table>
-            <div class="description" style="border-left-color: #39ff14;">
+            <div class="description">
                 <i>Si plus, venez en MP 💬</i>
             </div>
             <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander / Infos MP</a>
