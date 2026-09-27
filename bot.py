@@ -340,7 +340,7 @@ body {
     <div class="container">
         <div class="product-card">
             <div class="media-container">
-                <img src="https://via.placeholder.com/400x250" alt="Dry sift Porgiuez">
+                <img src="https://i.postimg.cc/c4CPJGdG/IMG-2982.jpg" alt="Dry sift Porgiuez">
             </div>
             <div class="description">
                 <b>Produit :</b> Dry sift 120u 🇪🇸<br>
