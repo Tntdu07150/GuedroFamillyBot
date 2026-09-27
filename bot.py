@@ -166,7 +166,7 @@ body {
     padding: 0 20px 30px;
 }
 
-/* Boutons / Catégories (Contours en Blanc) */
+/* Boutons / Catégories */
 .category {
     background: linear-gradient(135deg, #1f232d, #14161d);
     border: 2px solid #ffffff;
@@ -344,7 +344,9 @@ body {
             </div>
             <div class="description">
                 <b>Produit :</b> Dry sift 120u 🇪🇸<br>
-                <b>Origine :</b> Ferme / Club Porgiuez
+                <b>Origine :</b> Ferme / Club Porgiuez<br><br>
+                🍊 <b>Terpènes & Saveurs :</b> Une explosion aromatique très marquée. En bouche, il révèle un goût fruité et sucré très prononcé, accompagné d'une touche boisée et épicée.<br><br>
+                ✨ <b>Aspect & Texture :</b> Texture mousseuse, grasse au toucher et extrêmement crémeuse. S'effrite très facilement sans nécessiter de chauffe.
             </div>
             <table class="price-table">
                 <thead>
@@ -377,7 +379,9 @@ body {
             <div class="description">
                 <b>Produit :</b> Static de ferme/club 🥇<br>
                 <b>Origine :</b> VVS Tanger Farm<br>
-                <b>Export :</b> Espagne social club
+                <b>Export :</b> Espagne social club<br><br>
+                ⚡️ <b>Terpènes & Saveurs :</b> Profil ultra concentré avec un fort terp-lock. Arômes intenses et gazeux (gas/diesel) avec de légères piques d'agrumes et de résine fraîche.<br><br>
+                💎 <b>Aspect & Texture :</b> Aspect vitreux et translucide, figeant la résine à la perfection. Fond au contact des doigts avec une combustion propre et cendre blanche.
             </div>
             <table class="price-table">
                 <thead>
