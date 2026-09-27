@@ -85,30 +85,6 @@ def menu_principal(chat_id):
         ]
     }
 
-            ],
-            [
-                {
-                    "text": "📦 COLIS EN LIVRAISON",
-                    "url": COLIS_URL
-                }
-            ],
-            [
-                {
-                    "text": "📊 SONDAGE",
-                    "url": SONDAGE_URL
-                }
-            ],
-            [
-                {
-                    "text": "📱 MINI APP",
-                    "web_app": {
-                        "url": MINI_APP_URL
-                    }
-                }
-            ]
-        ]
-    }
-
     telegram("sendMessage", {
         "chat_id": chat_id,
         "text": (
