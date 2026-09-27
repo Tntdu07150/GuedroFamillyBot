@@ -380,9 +380,9 @@ body {
                 <b>Produit :</b> Static de ferme/club 🥇<br>
                 <b>Origine :</b> VVS Tanger Farm<br>
                 <b>Export :</b> Espagne social club<br><br>
-                👑 <b>Gamme :</b> Un hash véritablement ultra premium d'exception, sélectionné parmi les meilleures pépites.<br><br>
-                ⚡️ <b>Terpènes & Saveurs :</b> Profil ultra concentré avec un fort terp-lock. Arômes intenses et gazeux (gas/diesel) avec de légères piques d'agrumes et de résine fraîche.<br><br>
-                💎 <b>Aspect & Texture :</b> Aspect vitreux et translucide, figeant la résine à la perfection. Fond au contact des doigts avec une combustion propre et cendre blanche.
+                👑 <b>Gamme :</b> Ultra Premium (Sélection d'exception extraite selon les procédés les plus exigeants).<br><br>
+                ⚡️ <b>Terpènes & Saveurs :</b> Profil aromatique ultra concentré avec un excellent terp-lock. Arômes intenses et gazeux (gas/diesel) relevés de notes d'agrumes et de résine fraîche.<br><br>
+                💎 <b>Aspect & Texture :</b> Texture vitreuse et translucide à température ambiante, fondant instantanément sous les doigts. Combustion très propre avec une cendre blanche.
             </div>
             <table class="price-table">
                 <thead>
