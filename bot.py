@@ -331,7 +331,7 @@ body {
     <div class="subtitle">Sélectionne ton produit 👇</div>
     <div class="container">
         <div class="category" onclick="afficherPage('produit-porgiuez')">1️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
-        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma Static Meduza Zkittlez 🥇🍬👨‍🌾</div>
+        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma Static Elite Plasma Genetic Ferm👨‍🌾🥇✅</div>
         <div class="category back" onclick="afficherPage('page-principale')">⬅️ RETOUR</div>
     </div>
 </div>
@@ -379,7 +379,7 @@ body {
             </div>
             <div class="description">
                 <b>Produit :</b> Plasma Static Meduza Zkittlez 👨‍🌾🍬🍫<br>
-                <b>Origine :</b> Ferme Élite<br><br>
+                <b>Origine :</b> Ferme Élite Plasma Genetic ,epg , 👨‍🌾🥇🚀<br><br>
                 👑 <b>Gamme :</b> Ultra Premium — Réservée aux amateurs exigeants à la recherche de profils d'exception.<br><br>
                 ⚡ <b>Terpènes & Saveurs :</b> Arômes très fruités et sucrés type bonbon Zkittlez, relevés de sous-notes gazeuses et résineuses.<br><br>
                 💎 <b>Aspect & Texture :</b> Texture travaillée de haute qualité, fondante et très parfumée.
