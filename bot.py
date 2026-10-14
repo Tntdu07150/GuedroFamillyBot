@@ -331,7 +331,7 @@ body {
     <div class="subtitle">Sélectionne ton produit 👇</div>
     <div class="container">
         <div class="category" onclick="afficherPage('produit-porgiuez')">1️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
-        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma Static Elite Plasma Genetic Ferm👨‍🌾🥇✅</div>
+        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma Genetic Ferm👨‍🌾🥇✅</div>
         <div class="category back" onclick="afficherPage('page-principale')">⬅️ RETOUR</div>
     </div>
 </div>
