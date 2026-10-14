@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=2"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -90,7 +90,8 @@ def menu_principal(chat_id):
         "text": (
             "✈️ *MENU PRINCIPAL*\n\n"
             "Bienvenue sur *Guedrofamilly* 👋\n\n"
-            "Choisis une option ci-dessous 👇"
+            "Choisis une option ci-dessous 👇\n\n"
+            "Faite /start pour actualiser l’application menue 📱🤳"
         ),
         "parse_mode": "Markdown",
         "reply_markup": clavier
@@ -330,7 +331,7 @@ body {
     <div class="subtitle">Sélectionne ton produit 👇</div>
     <div class="container">
         <div class="category" onclick="afficherPage('produit-porgiuez')">1️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
-        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma static ferme élite plasma génétic 🥇🍫👨‍🌾</div>
+        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma Static Meduza Zkittlez 🥇🍬👨‍🌾</div>
         <div class="category back" onclick="afficherPage('page-principale')">⬅️ RETOUR</div>
     </div>
 </div>
@@ -368,21 +369,20 @@ body {
     </div>
 </div>
 
-<!-- PRODUIT 2: Plasma static ferme élite plasma génétic -->
+<!-- PRODUIT 2: Plasma Static Meduza Zkittlez -->
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
-            <div class="badge-soon">⏳ CE PRODUIT ARRIVE PROCHAINEMENT</div>
+            <div class="badge-soon">🚨 NOUVEAU PRODUIT ! 🚨</div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/400x250" alt="Plasma static">
+                <img src="https://i.postimg.cc/gcV2KRh6/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Plasma Static Meduza Zkittlez">
             </div>
             <div class="description">
-                <b>Produit :</b> Plasma static ferme élite plasma génétic 🥇🍫👨‍🌾<br>
-                <b>Origine :</b> Plasma Genetics<br>
-                <b>Export :</b> Espagne social club<br><br>
-                👑 <b>Gamme :</b> Ultra Premium — Une extraction d'exception réservée aux amateurs exigeants.<br><br>
-                ⚡️ <b>Terpènes & Saveurs :</b> Profil aromatique ultra concentré avec un excellent terp-lock. Arômes intenses et gazeux (gas/diesel) relevés de notes d'agrumes et de résine fraîche.<br><br>
-                💎 <b>Aspect & Texture :</b> Texture vitreuse et translucide à température ambiante, fondant instantanément sous les doigts. Combustion très propre avec une cendre blanche.
+                <b>Produit :</b> Plasma Static Meduza Zkittlez 👨‍🌾🍬🍫<br>
+                <b>Origine :</b> Ferme Élite<br><br>
+                👑 <b>Gamme :</b> Ultra Premium — Réservée aux amateurs exigeants à la recherche de profils d'exception.<br><br>
+                ⚡ <b>Terpènes & Saveurs :</b> Arômes très fruités et sucrés type bonbon Zkittlez, relevés de sous-notes gazeuses et résineuses.<br><br>
+                💎 <b>Aspect & Texture :</b> Texture travaillée de haute qualité, fondante et très parfumée.
             </div>
             <table class="price-table">
                 <thead>
