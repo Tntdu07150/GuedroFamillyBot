@@ -369,16 +369,16 @@ body {
     </div>
 </div>
 
-<!-- PRODUIT 2: Plasma static de ferme Elite Plasma Genetic👨‍🌾🥇🍫🚀 -->
+<!-- PRODUIT 2: Plasma genetic -->
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
-            <div class="badge-soon">🚨 NOUVEAUX PRODUIT! 🚨</div>
+            <div class="badge-soon">🚨 NOUVEAU PRODUIT ! 🚨</div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/400x250" alt="Plasma static de ferme Meduza Zkittlez">
+                <img src="https://via.placeholder.com/400x250" alt="Plasma genetic">
             </div>
             <div class="description">
-                <b>Produit :</b> Plasma static Meduza Zkittlez 👨‍🌾🍬🍫<br>
+                <b>Produit :</b> Plasma genetic 👨‍🌾🍬🍫<br>
                 <b>Origine :</b> Élite Plasma Genetic ferm (epg)👨‍🌾🇪🇺🥇<br>
                 <b>Export :</b> Européens 🇪🇺✅<br><br>
                 👑 <b>Gamme :</b> Ultra Premium — Réservée aux amateurs exigeants à la recherche de profils d'exception.<br><br>
