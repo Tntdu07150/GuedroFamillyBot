@@ -369,7 +369,7 @@ body {
     </div>
 </div>
 
-<!-- PRODUIT 2: Plasma Static Meduza Zkittlez -->
+<!-- PRODUIT 2: Plasma Static Elite Plasma Genetic Ferm👨‍🌾🥇✅ -->
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
