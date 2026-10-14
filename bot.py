@@ -330,7 +330,7 @@ body {
     <div class="subtitle">Sélectionne ton produit 👇</div>
     <div class="container">
         <div class="category" onclick="afficherPage('produit-porgiuez')">1️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
-        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Static de ferme/club (VVS) 🥇</div>
+        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma static ferme élite plasma génétic 🥇🍫👨‍🌾</div>
         <div class="category back" onclick="afficherPage('page-principale')">⬅️ RETOUR</div>
     </div>
 </div>
@@ -368,17 +368,17 @@ body {
     </div>
 </div>
 
-<!-- PRODUIT 2: Static de ferme/club -->
+<!-- PRODUIT 2: Plasma static ferme élite plasma génétic -->
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
             <div class="badge-soon">⏳ CE PRODUIT ARRIVE PROCHAINEMENT</div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/400x250" alt="Static VSS">
+                <img src="https://via.placeholder.com/400x250" alt="Plasma static">
             </div>
             <div class="description">
-                <b>Produit :</b> Static de ferme/club 🥇<br>
-                <b>Origine :</b> VVS Tanger Farm<br>
+                <b>Produit :</b> Plasma static ferme élite plasma génétic 🥇🍫👨‍🌾<br>
+                <b>Origine :</b> Plasma Genetics<br>
                 <b>Export :</b> Espagne social club<br><br>
                 👑 <b>Gamme :</b> Ultra Premium — Une extraction d'exception réservée aux amateurs exigeants.<br><br>
                 ⚡️ <b>Terpènes & Saveurs :</b> Profil aromatique ultra concentré avec un excellent terp-lock. Arômes intenses et gazeux (gas/diesel) relevés de notes d'agrumes et de résine fraîche.<br><br>
@@ -389,9 +389,9 @@ body {
                     <tr><th>Quantité</th><th>Prix Total</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Détail (1g)</td><td><strong>9 €</strong></td></tr>
-                    <tr><td>10g</td><td><strong>85 €</strong></td></tr>
-                    <tr><td>20g</td><td><strong>160 €</strong></td></tr>
+                    <tr><td>Détail (1g)</td><td><strong>12 €</strong></td></tr>
+                    <tr><td>10g</td><td><strong>120 €</strong></td></tr>
+                    <tr><td>100g</td><td><strong>1000 €</strong></td></tr>
                 </tbody>
             </table>
             <div class="description">
