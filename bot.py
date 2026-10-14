@@ -373,7 +373,7 @@ body {
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
-            <div class="badge-soon">🚨 NOUVEAUX PRODUIT 🚨</div>
+            <div class="badge-soon">🚨 NOUVEAUX PRODUIT! 🚨</div>
             <div class="media-container">
                 <img src="https://via.placeholder.com/400x250" alt="Plasma static de ferme Meduza Zkittlez">
             </div>
