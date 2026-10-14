@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=2"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=3"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -91,7 +91,7 @@ def menu_principal(chat_id):
             "✈️ *MENU PRINCIPAL*\n\n"
             "Bienvenue sur *Guedrofamilly* 👋\n\n"
             "Choisis une option ci-dessous 👇\n\n"
-            "Faite /start pour actualiser l’application menue 📱🤳"
+            "Fais /start pour actualiser l’application menu 📱🤳"
         ),
         "parse_mode": "Markdown",
         "reply_markup": clavier
@@ -310,7 +310,7 @@ body {
 
 <!-- LOGO & TITRE PERMANENTS -->
 <div class="brand-header">
-    <img class="logo-img" src="https://i.postimg.cc/gcV2KRh6/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Guedrofamilly Logo" onerror="this.src='https://via.placeholder.com/120/000000/ffffff?text=GF'">
+    <img class="logo-img" src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/main/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Guedrofamilly Logo" onerror="this.src='https://via.placeholder.com/120/000000/ffffff?text=GF'">
     <div class="header-title">Guedrofamilly</div>
 </div>
 
@@ -375,7 +375,7 @@ body {
         <div class="product-card">
             <div class="badge-soon">🚨 NOUVEAU PRODUIT ! 🚨</div>
             <div class="media-container">
-                <img src="https://i.postimg.cc/gcV2KRh6/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Plasma Static Meduza Zkittlez">
+                <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/main/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Plasma Static Meduza Zkittlez">
             </div>
             <div class="description">
                 <b>Produit :</b> Plasma Static Meduza Zkittlez 👨‍🌾🍬🍫<br>
