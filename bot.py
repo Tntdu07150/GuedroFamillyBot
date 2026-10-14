@@ -369,7 +369,7 @@ body {
     </div>
 </div>
 
-<!-- PRODUIT 2:  Plasma static de ferme Elite Plasma Genetic👨‍🌾🥇🍫🚀 -->
+<!-- PRODUIT 2: Plasma static de ferme Elite Plasma Genetic👨‍🌾🥇🍫🚀 -->
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
@@ -497,4 +497,3 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=port
     )
-
