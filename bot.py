@@ -331,7 +331,7 @@ body {
     <div class="subtitle">Sélectionne ton produit 👇</div>
     <div class="container">
         <div class="category" onclick="afficherPage('produit-porgiuez')">1️⃣ Dry sift 120u Porgiuez 🇪🇸</div>
-        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma Static Meduza Zkittlez 🥇🍬🧑‍🌾</div>
+        <div class="category" onclick="afficherPage('produit-vss')">2️⃣ Plasma genetic de ferme Élite Plasma Genetic 👨‍🌾🍫🥇🚀</div>
         <div class="category back" onclick="afficherPage('page-principale')">⬅️ RETOUR</div>
     </div>
 </div>
@@ -369,18 +369,18 @@ body {
     </div>
 </div>
 
-<!-- PRODUIT 2: Plasma Static Meduza Zkittlez -->
+<!-- PRODUIT 2: Plasma static de ferme Meduza Zkittlez -->
 <div id="produit-vss" class="hidden">
     <div class="container">
         <div class="product-card">
             <div class="badge-soon">⏳ CE PRODUIT ARRIVE PROCHAINEMENT</div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/400x250" alt="Plasma Static Meduza Zkittlez">
+                <img src="https://via.placeholder.com/400x250" alt="Plasma static de ferme Meduza Zkittlez">
             </div>
             <div class="description">
-                <b>Produit :</b> Plasma Static Meduza Zkittlez 🥇🍬🧑‍🌾<br>
-                <b>Origine :</b> Plasma Genetics<br>
-                <b>Export :</b> Espagne social club<br><br>
+                <b>Produit :</b> Plasma static de ferme Meduza Zkittlez 🥇🍬🧑‍🌾<br>
+                <b>Origine :</b> Élite plasma genetic (epg)👨‍🌾🥇<br>
+                <b>Exportation :</b> Européen🇪🇺✅<br><br>
                 👑 <b>Gamme :</b> Ultra Premium — Réservée aux amateurs exigeants à la recherche de profils d'exception.<br><br>
                 🧬 <b>Extraction :</b> Procédé Plasma Static de pointe, éliminant toute matière végétale pour isoler uniquement les têtes de trichomes pures et garantir un terp-lock parfait.<br><br>
                 ⚡ <b>Terpènes & Saveurs :</b> Arômes très fruités et sucrés type bonbon Zkittlez, relevés de sous-notes gazeuses (gas/diesel) et de résine fraîche.<br><br>
