@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=4"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=5"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -375,7 +375,7 @@ body {
         <div class="product-card">
             <div class="badge-soon">🚨 NOUVEAU PRODUIT ! 🚨</div>
             <div class="media-container">
-                <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/main/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Plasma Static Meduza Zkittlez">
+                <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/main/IMG_3199.jpeg" alt="Plasma Static Meduza Zkittlez">
             </div>
             <div class="description">
                 <b>Produit :</b> Plasma Static Meduza Zkittlez 👨‍🌾🍬🍫<br>
