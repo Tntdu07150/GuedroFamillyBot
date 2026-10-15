@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=5"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=6"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -391,7 +391,6 @@ body {
                 <tbody>
                     <tr><td>Détail (1g)</td><td><strong>12 €</strong></td></tr>
                     <tr><td>10g</td><td><strong>120 €</strong></td></tr>
-                    <tr><td>100g</td><td><strong>1000 €</strong></td></tr>
                 </tbody>
             </table>
             <div class="description">
