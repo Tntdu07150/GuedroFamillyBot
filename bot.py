@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=10"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=11"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -99,7 +99,7 @@ def menu_principal(chat_id):
 
 
 # =========================
-# MINI APP (APPLICATION MENU MODERN GRID)
+# MINI APP (APPLICATION MENU MODERN GRID WITH DROPDOWN)
 # =========================
 
 @app.route("/app", methods=["GET"])
@@ -177,36 +177,48 @@ body {
     font-weight: 700;
 }
 
-/* Barre de filtres catégories */
-.filter-bar {
-    display: flex;
-    gap: 8px;
+/* Zone Filtres avec Menu Déroulant (Volet Dépliant) */
+.filter-dropdown-container {
     padding: 15px 20px;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-.filter-bar::-webkit-scrollbar {
-    display: none;
+    display: flex;
+    gap: 10px;
 }
 
-.filter-btn {
+.custom-select-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.category-select {
+    width: 100%;
     background: #161922;
     border: 1px solid #282c37;
-    color: #a0a5b5;
-    padding: 10px 18px;
-    border-radius: 12px;
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
 }
 
-.filter-btn.active {
-    background: linear-gradient(135deg, #ff003c, #b3002d);
+.category-select:focus {
     border-color: #ff003c;
-    color: #ffffff;
     box-shadow: 0 0 12px rgba(255, 0, 60, 0.4);
+}
+
+.select-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #ff003c;
+    font-size: 12px;
 }
 
 /* Grille 2 colonnes pour les produits */
@@ -440,13 +452,18 @@ body {
     <div class="badge-count">2 Produits</div>
 </div>
 
-<!-- FILTRES DE CATÉGORIES -->
-<div class="filter-bar">
-    <button class="filter-btn active" onclick="filtrer('tous', this)">🔥 Tous</button>
-    <button class="filter-btn" onclick="filtrer('hash', this)">🧈 Hash</button>
-    <button class="filter-btn" onclick="filtrer('weed', this)">🌱 Weed</button>
-    <button class="filter-btn" onclick="filtrer('wpff', this)">✅ Wpff</button>
-    <button class="filter-btn" onclick="filtrer('festif', this)">🥳 Festif</button>
+<!-- MENU DÉROULANT DES CATÉGORIES -->
+<div class="filter-dropdown-container">
+    <div class="custom-select-wrap">
+        <select class="category-select" onchange="filtrerCategorie(this.value)">
+            <option value="tous">📂 Catégories : Toutes</option>
+            <option value="hash">🧈 Hash</option>
+            <option value="weed">🌱 Weed</option>
+            <option value="wpff">✅ Wpff</option>
+            <option value="festif">🥳 Produit festif</option>
+        </select>
+        <span class="select-arrow">▼</span>
+    </div>
 </div>
 
 <!-- GRILLE DES PRODUITS -->
@@ -555,10 +572,7 @@ const tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 
-function filtrer(cat, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
+function filtrerCategorie(cat) {
     const items = document.querySelectorAll('.prod-item');
     items.forEach(item => {
         if (cat === 'tous' || item.classList.contains(cat)) {
