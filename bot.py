@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=17"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=19"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -260,30 +260,6 @@ body {
     object-fit: cover;
 }
 
-/* Style spécifique pour la rupture de stock (produit grisé avec croix/bandeau) */
-.card.rupture .card-image-wrap img {
-    filter: grayscale(100%) brightness(0.4);
-}
-
-.rupture-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    font-weight: 900;
-    font-size: 13px;
-    color: #ff003c;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
-    text-align: center;
-    padding: 5px;
-    letter-spacing: 0.5px;
-}
-
 .tag-badge {
     position: absolute;
     bottom: 8px;
@@ -297,6 +273,20 @@ body {
     padding: 3px 8px;
     border-radius: 6px;
     text-transform: uppercase;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: linear-gradient(135deg, #00ff88, #00b359);
+    color: #000;
+    font-size: 10px;
+    font-weight: 900;
+    padding: 3px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
 .card-content {
@@ -375,25 +365,6 @@ body {
     border: 1px solid #222634;
 }
 
-/* Galerie photos multiples dans le modal */
-.modal-gallery {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    margin-bottom: 16px;
-    padding-bottom: 4px;
-}
-
-.modal-gallery img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid #222634;
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
 .modal-title {
     font-size: 20px;
     font-weight: 800;
@@ -441,21 +412,6 @@ body {
     font-weight: 800;
     font-size: 15px;
     box-shadow: 0 0 15px rgba(255, 0, 60, 0.4);
-}
-
-.btn-disabled {
-    display: block;
-    width: 100%;
-    background: #222634;
-    color: #717685;
-    text-align: center;
-    padding: 14px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 15px;
-    border: 1px solid #32384a;
-    cursor: not-allowed;
 }
 
 /* Barre de Navigation Fixe en Bas */
@@ -553,17 +509,17 @@ body {
         </div>
     </div>
 
-    <!-- PRODUIT 3 (RUPTURE DE STOCK) -->
-    <div class="card prod-item hash rupture" onclick="ouvrirModal('modal-mousseux')">
+    <!-- PRODUIT 3 (AVEC BADGE PRIX BAS) -->
+    <div class="card prod-item hash" onclick="ouvrirModal('modal-maroco')">
         <div class="card-image-wrap">
-            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3237.jpeg" alt="Mousseux des USA">
-            <div class="rupture-overlay">❌ RUPTURE<br>RETOUR CE SOIR</div>
-            <span class="tag-badge">🇺🇸 CALI MOUSSEUX</span>
+            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3260.jpeg" alt="X3 filtre maroco">
+            <span class="promo-badge">📉 PRIX BAS</span>
+            <span class="tag-badge">🇲🇦 X3 FILTRE</span>
         </div>
         <div class="card-content">
-            <div class="card-title">Mousseux des USA (Cali) 🇺🇸</div>
-            <div class="card-sub">Ice Cream Pie • 37.7% THC</div>
-            <div class="card-price" style="color: #8a8f9d;">Indisponible</div>
+            <div class="card-title">X3 filtre maroco 🇲🇦⚠️</div>
+            <div class="card-sub">Sélection GDF no ferm</div>
+            <div class="card-price">À partir de 7 €</div>
         </div>
     </div>
 
@@ -621,44 +577,28 @@ body {
     </div>
 </div>
 
-<!-- MODAL DÉTAILS PRODUIT 3: Mousseux des USA (Rupture) -->
-<div id="modal-mousseux" class="modal-overlay" onclick="fermerModalSurFond(event, 'modal-mousseux')">
+<!-- MODAL DÉTAILS PRODUIT 3: X3 filtre maroco -->
+<div id="modal-maroco" class="modal-overlay" onclick="fermerModalSurFond(event, 'modal-maroco')">
     <div class="modal-content">
-        <button class="close-btn" onclick="fermerModal('modal-mousseux')">✕</button>
-        
-        <!-- Image principale du produit -->
-        <img id="img-principale-mousseux" class="modal-img" src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3237.jpeg" alt="Mousseux des USA">
-        
-        <!-- Galerie pour changer l'image principale au clic -->
-        <div class="modal-gallery">
-            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3237.jpeg" onclick="changerImageModal('img-principale-mousseux', this.src)" alt="Photo 1">
-            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3245.jpeg" onclick="changerImageModal('img-principale-mousseux', this.src)" alt="Photo 2">
-            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3229.jpeg" onclick="changerImageModal('img-principale-mousseux', this.src)" alt="Photo 3">
-        </div>
-
-        <div class="modal-title">Mousseux des USA (Cali) certifié 🇺🇸⚠️🚀</div>
-        <div class="modal-desc" style="border-left-color: #ff003c; background: rgba(255, 0, 60, 0.08);">
-            🚨 <b>PRODUIT EN RUPTURE DE STOCK</b><br>
-            <i>De retour ce soir en quantité limitée !</i><br><br>
-            <b>Génétique :</b> Cali Genetics (Made in USA)<br>
-            <b>Extraction :</b> Dry Sift tamisage 120u<br>
-            <b>Puissance :</b> 37.7% THC<br><br>
-            🍊 <b>Terpènes :</b> Profil aromatique gourmand et fidèle à la variété Ice Cream Pie. Notes douces, sucrées et crémeuses de dessert, avec une touche typique des génétiques californiennes.<br><br>
-            ✨ <b>Texture :</b> Texture mousseuse caractéristique d'un bon jaune Cali. Facile à travailler, s'effrite sans effort et offre une consistance malléable idéale au quotidien.
+        <button class="close-btn" onclick="fermerModal('modal-maroco')">✕</button>
+        <img class="modal-img" src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3260.jpeg" alt="X3 filtre maroco">
+        <div class="modal-title">X3 filtre maroco 🇲🇦⚠️</div>
+        <div class="modal-desc">
+            <b>Origine :</b> Sélection GDF no ferm 🇲🇦🫡<br><br>
+            🍊 <b>Terpènes :</b> Profil aromatique intense et complexe, notes terreuses et boisées typiques du terroir marocain, relevées de nuances douces et résineuses.<br><br>
+            ✨ <b>Texture :</b> Mousseuse, grasse et particulièrement crémeuse. S'effrite très facilement grâce à la finesse des trois filtrations successives.
         </div>
         <table class="modal-table">
             <thead>
                 <tr><th>Quantité</th><th>Prix Total</th></tr>
             </thead>
             <tbody>
-                <tr><td>1g (Détail)</td><td>6.5 €</td></tr>
-                <tr><td>10g</td><td>60 €</td></tr>
-                <tr><td>20g</td><td>110 €</td></tr>
-                <tr><td>50g</td><td>En MP 💬</td></tr>
-                <tr><td>100g</td><td>En MP 💬</td></tr>
+                <tr><td>1g (Détail)</td><td>7 €</td></tr>
+                <tr><td>10g</td><td>65 €</td></tr>
+                <tr><td>20g</td><td>120 €</td></tr>
             </tbody>
         </table>
-        <div class="btn-disabled">❌ Indisponible jusqu'à ce soir</div>
+        <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander / Contact MP</a>
     </div>
 </div>
 
@@ -710,10 +650,6 @@ function fermerModalSurFond(event, id) {
     if (event.target.classList.contains('modal-overlay')) {
         fermerModal(id);
     }
-}
-
-function changerImageModal(idImg, nouveauSrc) {
-    document.getElementById(idImg).src = nouveauSrc;
 }
 </script>
 
