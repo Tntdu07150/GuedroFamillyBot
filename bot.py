@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=13"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=14"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -529,7 +529,7 @@ body {
 
 </div>
 
-<!-- MODAL DÉTAILS PRODUIT 1 -->
+<!-- MODAL DÉTAILS PRODUIT 1: Dry sift 120u Porgiuez -->
 <div id="modal-porgiuez" class="modal-overlay" onclick="fermerModalSurFond(event, 'modal-porgiuez')">
     <div class="modal-content">
         <button class="close-btn" onclick="fermerModal('modal-porgiuez')">✕</button>
@@ -547,6 +547,7 @@ body {
             <tbody>
                 <tr><td>1g (Détail)</td><td>8 €</td></tr>
                 <tr><td>10g</td><td>75 €</td></tr>
+                <tr><td>20g</td><td>140 €</td></tr>
                 <tr><td>50g</td><td>250 €</td></tr>
                 <tr><td>100g</td><td>480 €</td></tr>
             </tbody>
