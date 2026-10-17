@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=11"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=13"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -347,8 +347,27 @@ body {
     max-height: 220px;
     object-fit: cover;
     border-radius: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border: 1px solid #222634;
+}
+
+/* Galerie photos multiples dans le modal */
+.modal-gallery {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+}
+
+.modal-gallery img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #222634;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
 .modal-title {
@@ -449,7 +468,7 @@ body {
         <img class="logo-img" src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/main/4584E461-74CC-44BF-A7C6-28600C22F000.png" alt="Logo">
         <div class="brand-title">Guedrofamilly</div>
     </div>
-    <div class="badge-count">2 Produits</div>
+    <div class="badge-count">3 Produits</div>
 </div>
 
 <!-- MENU DÉROULANT DES CATÉGORIES -->
@@ -495,6 +514,19 @@ body {
         </div>
     </div>
 
+    <!-- PRODUIT 3 -->
+    <div class="card prod-item hash" onclick="ouvrirModal('modal-mousseux')">
+        <div class="card-image-wrap">
+            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3237.jpeg" alt="Mousseux des USA">
+            <span class="tag-badge">🇺🇸 CALI MOUSSEUX</span>
+        </div>
+        <div class="card-content">
+            <div class="card-title">Mousseux des USA (Cali) 🇺🇸</div>
+            <div class="card-sub">Ice Cream Pie • 37.7% THC</div>
+            <div class="card-price">À partir de 6.5 €</div>
+        </div>
+    </div>
+
 </div>
 
 <!-- MODAL DÉTAILS PRODUIT 1 -->
@@ -530,9 +562,10 @@ body {
         <img class="modal-img" src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/main/IMG_3199.jpeg" alt="Plasma Static">
         <div class="modal-title">Plasma Genetic Ferm 👨‍🌾🥇✅</div>
         <div class="modal-desc">
-            <b>Origine :</b> Élite Plasma Genetic Ferm "epg"<br><br>
-            👑 <b>Gamme :</b> Ultra Premium réservée aux connaisseurs.<br><br>
-            ⚡ <b>Terpènes :</b> Bonbon Zkittlez fruité avec des sous-notes gazeuses.
+            <b>Origine :</b> Élite Plasma Genetic Ferm<br>
+            <b>Type de filtration :</b> Plasma Static Separation (Trichomes isolés à 99% par lévitation électrostatique, zéro résidu végétal)<br><br>
+            🍊 <b>Terpènes :</b> Profil puissant et gazeux. Notes intenses de carburant/pétrole (gas) et de solvants nobles, adoucies par un retour très prononcé de bonbon sucré, de pâtisserie gourmande et une touche épicée/poivrée en fin de bouche. Goût "Cali" lourd et persistant.<br><br>
+            ✨ <b>Texture :</b> Résine ultra-fondante au teint blond doré. Texture "glassy" qui se transforme en huile translucide et collante au simple contact des doigts. Fond à 100 % à la chauffe sans laisser aucun résidu (Full Melt).
         </div>
         <table class="modal-table">
             <thead>
@@ -541,6 +574,45 @@ body {
             <tbody>
                 <tr><td>1g (Détail)</td><td>12 €</td></tr>
                 <tr><td>10g</td><td>120 €</td></tr>
+            </tbody>
+        </table>
+        <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander / Contact MP</a>
+    </div>
+</div>
+
+<!-- MODAL DÉTAILS PRODUIT 3: Mousseux des USA -->
+<div id="modal-mousseux" class="modal-overlay" onclick="fermerModalSurFond(event, 'modal-mousseux')">
+    <div class="modal-content">
+        <button class="close-btn" onclick="fermerModal('modal-mousseux')">✕</button>
+        
+        <!-- Image principale du produit -->
+        <img id="img-principale-mousseux" class="modal-img" src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3237.jpeg" alt="Mousseux des USA">
+        
+        <!-- Galerie pour changer l'image principale au clic -->
+        <div class="modal-gallery">
+            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3237.jpeg" onclick="changerImageModal('img-principale-mousseux', this.src)" alt="Photo 1">
+            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3245.jpeg" onclick="changerImageModal('img-principale-mousseux', this.src)" alt="Photo 2">
+            <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3229.jpeg" onclick="changerImageModal('img-principale-mousseux', this.src)" alt="Photo 3">
+        </div>
+
+        <div class="modal-title">Mousseux des USA (Cali) certifié 🇺🇸⚠️🚀</div>
+        <div class="modal-desc">
+            <b>Génétique :</b> Cali Genetics (Made in USA)<br>
+            <b>Extraction :</b> Dry Sift tamisage 120u<br>
+            <b>Puissance :</b> 37.7% THC<br><br>
+            🍊 <b>Terpènes :</b> Profil aromatique gourmand et fidèle à la variété Ice Cream Pie. Notes douces, sucrées et crémeuses de dessert, avec une touche typique des génétiques californiennes.<br><br>
+            ✨ <b>Texture :</b> Texture mousseuse caractéristique d'un bon jaune Cali. Facile à travailler, s'effrite sans effort et offre une consistance malléable idéale au quotidien.
+        </div>
+        <table class="modal-table">
+            <thead>
+                <tr><th>Quantité</th><th>Prix Total</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1g (Détail)</td><td>6.5 €</td></tr>
+                <tr><td>10g</td><td>60 €</td></tr>
+                <tr><td>20g</td><td>110 €</td></tr>
+                <tr><td>50g</td><td>200 €</td></tr>
+                <tr><td>100g</td><td>380 €</td></tr>
             </tbody>
         </table>
         <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander / Contact MP</a>
@@ -595,6 +667,10 @@ function fermerModalSurFond(event, id) {
     if (event.target.classList.contains('modal-overlay')) {
         fermerModal(id);
     }
+}
+
+function changerImageModal(idImg, nouveauSrc) {
+    document.getElementById(idImg).src = nouveauSrc;
 }
 </script>
 
