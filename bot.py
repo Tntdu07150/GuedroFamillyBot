@@ -17,7 +17,7 @@ COLIS_URL = "https://t.me/+mSsjkyjSmVU2M2U8"
 SONDAGE_URL = "https://t.me/+jwAgNDcMINphOThk"
 VIPGUEDROFAMILLY_URL = "https://t.me/+hqu05O8JCl03NzZk"
 
-MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=16"
+MINI_APP_URL = "https://guedrofamillybot.onrender.com/app?v=17"
 
 API = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -260,6 +260,30 @@ body {
     object-fit: cover;
 }
 
+/* Style spécifique pour la rupture de stock (produit grisé avec croix/bandeau) */
+.card.rupture .card-image-wrap img {
+    filter: grayscale(100%) brightness(0.4);
+}
+
+.rupture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    font-weight: 900;
+    font-size: 13px;
+    color: #ff003c;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 0.5px;
+}
+
 .tag-badge {
     position: absolute;
     bottom: 8px;
@@ -419,6 +443,21 @@ body {
     box-shadow: 0 0 15px rgba(255, 0, 60, 0.4);
 }
 
+.btn-disabled {
+    display: block;
+    width: 100%;
+    background: #222634;
+    color: #717685;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    border: 1px solid #32384a;
+    cursor: not-allowed;
+}
+
 /* Barre de Navigation Fixe en Bas */
 .navbar {
     position: fixed;
@@ -514,16 +553,17 @@ body {
         </div>
     </div>
 
-    <!-- PRODUIT 3 -->
-    <div class="card prod-item hash" onclick="ouvrirModal('modal-mousseux')">
+    <!-- PRODUIT 3 (RUPTURE DE STOCK) -->
+    <div class="card prod-item hash rupture" onclick="ouvrirModal('modal-mousseux')">
         <div class="card-image-wrap">
             <img src="https://raw.githubusercontent.com/Tntdu07150/GuedroFamillyBot/refs/heads/main/IMG_3237.jpeg" alt="Mousseux des USA">
+            <div class="rupture-overlay">❌ RUPTURE<br>RETOUR CE SOIR</div>
             <span class="tag-badge">🇺🇸 CALI MOUSSEUX</span>
         </div>
         <div class="card-content">
             <div class="card-title">Mousseux des USA (Cali) 🇺🇸</div>
             <div class="card-sub">Ice Cream Pie • 37.7% THC</div>
-            <div class="card-price">À partir de 6.5 €</div>
+            <div class="card-price" style="color: #8a8f9d;">Indisponible</div>
         </div>
     </div>
 
@@ -581,7 +621,7 @@ body {
     </div>
 </div>
 
-<!-- MODAL DÉTAILS PRODUIT 3: Mousseux des USA -->
+<!-- MODAL DÉTAILS PRODUIT 3: Mousseux des USA (Rupture) -->
 <div id="modal-mousseux" class="modal-overlay" onclick="fermerModalSurFond(event, 'modal-mousseux')">
     <div class="modal-content">
         <button class="close-btn" onclick="fermerModal('modal-mousseux')">✕</button>
@@ -597,7 +637,9 @@ body {
         </div>
 
         <div class="modal-title">Mousseux des USA (Cali) certifié 🇺🇸⚠️🚀</div>
-        <div class="modal-desc">
+        <div class="modal-desc" style="border-left-color: #ff003c; background: rgba(255, 0, 60, 0.08);">
+            🚨 <b>PRODUIT EN RUPTURE DE STOCK</b><br>
+            <i>De retour ce soir en quantité limitée !</i><br><br>
             <b>Génétique :</b> Cali Genetics (Made in USA)<br>
             <b>Extraction :</b> Dry Sift tamisage 120u<br>
             <b>Puissance :</b> 37.7% THC<br><br>
@@ -616,7 +658,7 @@ body {
                 <tr><td>100g</td><td>En MP 💬</td></tr>
             </tbody>
         </table>
-        <a href="https://t.me/+HgfeOV-dulE3ZDJk" class="btn-order">🛒 Commander / Contact MP</a>
+        <div class="btn-disabled">❌ Indisponible jusqu'à ce soir</div>
     </div>
 </div>
 
